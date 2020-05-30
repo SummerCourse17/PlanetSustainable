@@ -15,6 +15,7 @@
     </style>
     <header><img src="https://planetsustainable20.files.wordpress.com/2020/04/nature-3294632_1920.jpg" width="100px"><h2>Planet Sustainable</h2></header>
     <p><a href="https://planetsustainable20.wordpress.com/facts/">Return to 'Facts'</a></p>
+    <button onclick="startQuiz()">Start Quiz</button>
     <!--<p id="q">Quiz Not Started!</p>
     <input type="text" name="q1" value="" id="q1"> <br />
     <span>Result to last question: </span><span id="result">Click to start Quiz:</span><br />
@@ -60,6 +61,7 @@
       }
     }-->
     <script>
+    function startQuiz(){
     var score = 0;
     if (prompt ("True or False: High poverty rates are often found in small, fragile and conflict affected countries.") == "True" ) {
       alert("Well done");
@@ -81,6 +83,7 @@
     }
 
     alert("Your score was: " + score + "/3");
+    }
     </script>
   </body>
 </html>
