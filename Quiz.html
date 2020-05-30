@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+  </head>
+  <body>
+    <p id="q">Quiz Not Started!</p>
+    <input type="text" name="q1" value="" id="q1"> <br />
+    <span>Result to last question: </span><span id="result">Click to start Quiz:</span><br />
+    <button onclick="nextQuestion()">Submit Answer</button>
+    <script>
+    var score = 0;
+    var q = 0;
+    var answer = "";
+    function nextQuestion(){
+      if (q = 0) {
+        document.getElementById("q").innerHTML = "True or False: High poverty rates are often found in small, fragile and conflict affected countries.";
+        q = q +1;
+      } else if (q = 1) {
+        answer = document.getElementById("q1").value;
+        if (answer == "True" ) {
+          document.getElementById("result").innerHTML = "Well done";
+          score = score + 1;
+        } else {
+          document.getElementById("result").innerHTML = "Incorrect.";
+        }
+        document.getElementById("q").innerHTML = "More than 4 billion people do not use the internet, what percentage is from the developing world?";
+        q = q + 1;
+      } else if (q = 2){
+        answer = document.getElementById("q1").value;
+        if (answer == "90%" ) {
+          document.getElementById("result").innerHTML = "Well done";
+          score = score + 1;
+        } else {
+          document.getElementById("result").innerHTML = "Incorrect.";
+        }
+        document.getElementById("q").innerHTML = "True or false 13 million hectares of forest are being lost every year.";
+        q = q + 1;
+      }  else if (q = 3){
+        answer = document.getElementById("q1").value;
+        if (answer == "True" ) {
+          document.getElementById("result").innerHTML = "Well done";
+          score = score + 1;
+        } else {
+          document.getElementById("result").innerHTML = "Incorrect.";
+        }
+        document.getElementById("q").innerHTML = "Quiz Complete! Your Score was: " + score + "/3";
+        q = q + 1;
+      }
+    }
+    if (prompt ("True or False: High poverty rates are often found in small, fragile and conflict affected countries.") == "True" ) {
+      alert("Well done");
+      score = score + 1;
+    } else {
+      alert("Incorrect.");
+    }
+    if (prompt ("More than 4 billion people do not use the internet, what percentage is from the developing world?") == "90%" ) {
+      alert("Well done");
+      score = score + 1;
+    } else {
+      alert("Incorrect.");
+    }
+    if (prompt ("True or false 13 million hectares of forest are being lost every year. ") == "True" ) {
+      alert("Well done");
+      score = score + 1;
+    } else {
+      alert("Incorrect.");
+    }
+
+    alert("Your score was: " + score + "/3");
+    </script>
+  </body>
+</html>
